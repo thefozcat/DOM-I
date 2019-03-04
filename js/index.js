@@ -41,6 +41,8 @@ const siteContent = {
 const logo = document.querySelector("#logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+const mainNav = document.querySelector('nav');
+
 const navItem = document.querySelectorAll('nav a');
 navItem[0].textContent = 'Home';
 navItem[1].textContent = 'Product';
@@ -51,6 +53,17 @@ navItem[5].textContent = 'Contact';
 navItem.forEach(function(currentValue) {
   currentValue.style.color = 'green';
 });
+
+const newNavItem = document.createElement('a');
+newNavItem.textContent = 'Blog';
+newNavItem.style.color = 'green';
+
+const firstNavItem = document.createElement('a');
+firstNavItem.textContent = 'Start!';
+firstNavItem.style.color = 'green';
+
+mainNav.appendChild(newNavItem);
+mainNav.prepend(firstNavItem);
 
 const headerImg = document.querySelector("#cta-img");
 headerImg.src = siteContent['cta']['img-src'];
