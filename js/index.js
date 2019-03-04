@@ -41,6 +41,8 @@ const siteContent = {
 const logo = document.querySelector("#logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+// Navigation
+
 const mainNav = document.querySelector('nav');
 
 const navItem = document.querySelectorAll('nav a');
@@ -65,6 +67,8 @@ firstNavItem.style.color = 'green';
 mainNav.appendChild(newNavItem);
 mainNav.prepend(firstNavItem);
 
+// CTA
+
 const headerImg = document.querySelector("#cta-img");
 headerImg.src = siteContent['cta']['img-src'];
 
@@ -73,6 +77,8 @@ mainH1.textContent = 'DOM is Awesome';
 
 const btn = document.querySelector('button');
 btn.textContent = 'Get Started';
+
+// Main Content
 
 const contentHead = document.querySelectorAll('h4');
 contentHead[0].textContent = siteContent['main-content']['features-h4'];
@@ -91,6 +97,8 @@ content[4].textContent = siteContent['main-content']['vision-content'];
 const middleImg = document.querySelector('.middle-img');
 middleImg.src = siteContent['main-content']['middle-img-src'];
 
+// Contact
+
 const contactHeader = document.querySelector('.contact h4');
 contactHeader.textContent = siteContent['contact']['contact-h4'];
 
@@ -98,6 +106,8 @@ const contactInfo = document.querySelectorAll('.contact p');
 contactInfo[0].textContent = siteContent['contact']['address'];
 contactInfo[1].textContent = siteContent['contact']['phone'];
 contactInfo[2].textContent = siteContent['contact']['email'];
+
+// Footer
 
 const footerInfo = document.querySelector('footer p');
 footerInfo.textContent = siteContent['footer']['copyright'];
