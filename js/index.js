@@ -41,6 +41,21 @@ const siteContent = {
 const logo = document.querySelector("#logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+// Body
+
+const mainBackground = document.querySelector('body');
+mainBackground.style.background = 'lightgrey';
+
+// Container
+
+const container = document.querySelector('.container');
+container.style.background = 'white';
+container.style.padding = '3rem';
+
+// Header
+
+const mainHeader = document.querySelector
+
 // Navigation
 
 const mainNav = document.querySelector('nav');
@@ -77,6 +92,15 @@ mainH1.textContent = 'DOM is Awesome';
 
 const btn = document.querySelector('button');
 btn.textContent = 'Get Started';
+btn.addEventListener('click', event => {
+  mainBackground.style.background = 'white';
+  mainBackground.style.transition = 'all 300ms ease';
+  container.style.background = 'lightgrey';
+  container.style.transition = 'all 300ms ease';
+  btn.style.background = 'black';
+  btn.style.color = 'white';
+  btn.style.border = '1px solid white';
+});
 
 // Main Content
 
@@ -96,6 +120,7 @@ content[4].textContent = siteContent['main-content']['vision-content'];
 
 const middleImg = document.querySelector('.middle-img');
 middleImg.src = siteContent['main-content']['middle-img-src'];
+middleImg.style.width = '100%';
 
 // Contact
 
